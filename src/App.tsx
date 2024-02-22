@@ -1,36 +1,18 @@
-import { useState } from "react";
 import "./App.css";
+import { Navbar } from "@/components/Navbar";
+import { TopBar } from "@/components/TopBar";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div>
-        <div>
-          <p>Navbar</p>
-        </div>
+    <div className="flex h-full w-full">
+      <div className="w-[15%] h-full min-w-[220px]">
+        <Navbar />
       </div>
-      <div>
-        <div>
-          <p>Topbar</p>
-        </div>
-        <div>
-          <h1>Vite + React</h1>
-          <div className="card">
-            <button onClick={() => setCount((count) => count + 1)}>
-              count is {count}
-            </button>
-            <p>
-              Edit <code>src/App.tsx</code> and save to test HMR
-            </p>
-          </div>
-          <p className="read-the-docs">
-            Click on the Vite and React logos to learn more
-          </p>
-        </div>
+      <div className="w-full flex flex-col p-2.5">
+        <TopBar />
+        <div className="h-full">content</div>
       </div>
-    </>
+    </div>
   );
 }
 
