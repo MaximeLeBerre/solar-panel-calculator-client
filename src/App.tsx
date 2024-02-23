@@ -1,6 +1,7 @@
 import "./App.css";
 import { Navbar } from "@/components/Navbar";
 import { TopBar } from "@/components/TopBar";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
@@ -10,7 +11,9 @@ function App() {
       </div>
       <div className="w-full flex flex-col p-2.5">
         <TopBar />
-        <div className="h-full">content</div>
+        <div className="h-full">
+          <Outlet />
+        </div>
       </div>
     </div>
   );
