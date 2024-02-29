@@ -4,6 +4,8 @@ import App from "./App.tsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
+import { Dashboard } from "@/pages/dashboard";
+import { Audit } from "@/pages/audit";
 
 const router = createBrowserRouter([
   {
@@ -12,11 +14,11 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <p>Dashboard</p>,
+        element: <Dashboard />,
       },
       {
         path: "audit",
-        element: <p>Audit</p>,
+        element: <Audit />,
       },
     ],
   },
